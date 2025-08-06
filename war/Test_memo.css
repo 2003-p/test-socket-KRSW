@@ -1,0 +1,71 @@
+/* bodyのデフォルトマージンをリセット */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background_test {
+    background: radial-gradient(rgb(192, 192, 192), rgb(0, 0, 0));
+    width: 100vw;   
+    height: auto;
+    min-height: 100px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 新しいコンテナのスタイル：これが全体の外枠になります */
+.notepad-container {
+    width: 90%; /* 親要素（body）の90%の幅 */
+    min-height: 200px; /* 全体の最低限の高さ */
+    border: 2px solid #555; /* 全体の外枠のスタイル */
+    border-radius: 5px; /* 角を少し丸くする */
+    padding: 15px; /* 内側の余白 */
+    margin: 20px auto; /* 上下20px、左右中央に配置 */
+    background-color: #f9f9f9; /* 背景色 */
+    box-sizing: border-box; /* パディングとボーダーを幅・高さの計算に含める */
+
+    display: flex; /* 子要素のinputを縦に並べるためにFlexboxを使用 */
+    flex-direction: column; /* 子要素を縦方向に配置 */
+    gap: 5px; /* 各input要素間の余白 */
+}
+
+/* 各input type="text"要素のスタイル */
+.note-line {
+    width: 100%; /* 親要素（.notepad-container）の幅いっぱいに */
+    padding: 8px 0; /* 上下のパディングを設定 */
+    border: none; /* デフォルトの枠線をなくす */
+    border-bottom: 1px dashed #ccc; /* 各行の下線 */
+    background-color: transparent; /* 背景を透明にしてコンテナの背景色を見せる */
+    font-family: "BIZ UDGothic", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", serif;
+    font-size: 1.2em; /* 文字サイズ */
+    color: #333; /* 文字色 */
+    outline: none; /* フォーカス時の青いアウトラインを消す */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+/* inputがフォーカスされた時の下線の色を変える */
+.note-line:focus {
+    border-bottom-color: #007bff; /* フォーカス時に青い下線 */
+}
+
+/* プレースホルダーのスタイル */
+.note-line::placeholder {
+    color: #999;
+}
+
+/* 以前のtextareaのスタイルは不要になります */
+/* #notepad {
+    ...
+} */
