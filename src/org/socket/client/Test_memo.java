@@ -39,23 +39,32 @@ public class Test_memo implements EntryPoint {
         var protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
         var url = protocol + "//" + window.location.host + "/test_memo/websocket/memo";
         var self = this;
+
+        $wnd.console.log("Attempting to connect to WebSocket at: " + url);
         
         var ws = new WebSocket(url);
         
         ws.onopen = function(event) {
-            $wnd.console.log("WebSocket connected!");
+            $wnd.console.log("WebSocket connection successfully opened.", event);
         };
         
         ws.onmessage = function(event) {
+            $wnd.console.log("WebSocket message received: ", event.data);
             self.@org.socket.client.Test_memo::updateMemo(Ljava/lang/String;)(event.data);
         };
         
         ws.onclose = function(event) {
-            $wnd.console.log("WebSocket disconnected: " + event.code + " " + event.reason);
+            if (event.wasClean) {
+                $wnd.console.log("WebSocket connection closed cleanly. Code: " + event.code + ", Reason: " + event.reason);
+            } else {
+                // e.g. server process killed or network down
+                // event.code is usually 1006 in this case
+                $wnd.console.warn("WebSocket connection died. Code: " + event.code);
+            }
         };
         
         ws.onerror = function(event) {
-            $wnd.console.error("WebSocket error!", event);
+            $wnd.console.error("A WebSocket error occurred:", event);
         };
         
         this.@org.socket.client.Test_memo::ws = ws;
