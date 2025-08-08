@@ -5,5 +5,9 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Java8"/>
 	<classpathentry kind="lib" path="C:/Users/y-okabe/Downloads/requestfactory-server-2.8.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/y-okabe/Downloads/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/javax.websocket-api-1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/javax-websocket-server-impl-9.2.15.v20160210.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/websocket-server-9.2.15.v20160210.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

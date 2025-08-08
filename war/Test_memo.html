@@ -1,41 +1,17 @@
 <!doctype html>
-<!-- The DOCTYPE declaration above will set the     -->
-<!-- browser's rendering engine into                -->
-<!-- "Standards Mode". Replacing this declaration   -->
-<!-- with a "Quirks Mode" doctype is not supported. -->
-
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-    <!--                                                               -->
-    <!-- Consider inlining CSS to reduce the number of requested files -->
-    <!--                                                               -->
     <link type="text/css" rel="stylesheet" href="Test_memo.css">
-
-    <!--                                           -->
-    <!-- Any title is fine                         -->
-    <!--                                           -->
     <title>Web Application Starter Project</title>
-    
-    <!--                                           -->
-    <!-- This script loads your compiled module.   -->
-    <!-- If you add any GWT meta tags, they must   -->
-    <!-- be added before this line.                -->
-    <!--                                           -->
     <script type="text/javascript" language="javascript" src="test_memo/test_memo.nocache.js"></script>
   </head>
+  <body>
+    <div class="background_test">
+        <h1>Socket通信を用いたメモ帳 </h1>
+    </div>
 
-  <!--                                           -->
-  <!-- The body can have arbitrary html, or      -->
-  <!-- you can leave the body empty if you want  -->
-  <!-- to create a completely dynamic UI.        -->
-  <!--                                           -->
- <body>
-	<div class="background_test">
-		<h1>Socket通信を用いたメモ帳 aa</h1>
-	</div>
-
+    <div id="nameFieldContainer"></div>
     <div class="notepad-container">
         <input type="text" class="note-line" > 
         <input type="text" class="note-line" >
@@ -46,6 +22,7 @@
         <input type="text" class="note-line" >
         <input type="text" class="note-line" >
         <input type="text" class="note-line" >
-        </div>
-			
-</body>
+    </div>
+        
+  </body>
+</html>
