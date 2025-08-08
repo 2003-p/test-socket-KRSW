@@ -1,0 +1,16 @@
+# Compiled class files
+/war/WEB-INF/classes/
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+# GWT temporary files and compiled output
+.gwt/
+gwt-unitCache/
+/war/test_memo/
+/war/WEB-INF/deploy/
+
+# Log files
+*.log

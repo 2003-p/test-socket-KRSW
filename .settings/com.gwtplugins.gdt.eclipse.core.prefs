@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=C\:/Users/y-okabe/test-memo/war/WEB-INF/lib/gwt-servlet.jar|C\:/Users/y-okabe/Downloads/requestfactory-server-2.8.2.jar
 warSrcDir=war
 warSrcDirIsOutput=true
