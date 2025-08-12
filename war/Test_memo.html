@@ -3,26 +3,19 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link type="text/css" rel="stylesheet" href="Test_memo.css">
-    <title>Web Application Starter Project</title>
+    <title>リアルタイム共同編集</title>
     <script type="text/javascript" language="javascript" src="test_memo/test_memo.nocache.js"></script>
   </head>
+
   <body>
+
     <div class="background_test">
-        <h1>Socket通信を用いたメモ帳 </h1>
+        <h1>リアルタイム共同編集</h1>
+        <div id="statusContainer" style="text-align: center; padding: 5px;"></div>
     </div>
 
-    <div id="nameFieldContainer"></div>
-    <div class="notepad-container">
-        <input type="text" class="note-line" > 
-        <input type="text" class="note-line" >
-        <input type="text" class="note-line" >
-        <input type="text" class="note-line" >
-        <input type="text" class="note-line" >
-        <input type="text" class="note-line" >
-        <input type="text" class="note-line" >
-        <input type="text" class="note-line" >
-        <input type="text" class="note-line" >
-    </div>
+    <div id="realtime-editor-container" class="notepad-container">
+        </div>
         
   </body>
 </html>
